@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>手势洞洞波 · Gesture Kamehameha</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene"></canvas>
+
+      <div id="status-bar">
+        <span id="status-text">初始化中…</span>
+        <span id="camera-badge">摄像头未启动</span>
+      </div>
+
+      <div id="video-wrap">
+        <video id="cam" autoplay playsinline muted></video>
+      </div>
+
+      <button id="start-btn">点击启动摄像头</button>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

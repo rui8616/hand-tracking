@@ -1,0 +1,82 @@
+:root {
+  --bg: #000;
+  --fg: #eaf6ff;
+  --accent: #6ee7ff;
+  --accent-2: #c084fc;
+  --muted: rgba(234, 246, 255, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: var(--fg); }
+
+#app { position: relative; width: 100vw; height: 100vh; }
+
+#scene {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  display: block;
+}
+
+#status-bar {
+  position: absolute;
+  top: 16px; left: 16px;
+  display: flex; gap: 8px; align-items: center;
+  font-size: 14px; line-height: 1.2;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#status-text {
+  padding: 6px 12px;
+  background: linear-gradient(90deg, rgba(110,231,255,0.15), rgba(192,132,252,0.15));
+  border: 1px solid rgba(110,231,255,0.25);
+  border-radius: 999px;
+  backdrop-filter: blur(8px);
+  color: var(--fg);
+}
+
+#camera-badge {
+  padding: 6px 12px;
+  background: rgba(192,132,252,0.15);
+  border: 1px solid rgba(192,132,252,0.35);
+  border-radius: 999px;
+  color: #e9d5ff;
+  font-size: 13px;
+}
+#camera-badge.on { background: rgba(110,231,255,0.18); border-color: rgba(110,231,255,0.5); color: var(--accent); }
+
+#video-wrap {
+  position: absolute;
+  right: 16px; bottom: 16px;
+  width: 220px; aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(234, 246, 255, 0.12);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  background: #111;
+  z-index: 10;
+}
+#cam {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+#start-btn {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 14px 28px;
+  font-size: 16px;
+  color: var(--fg);
+  background: linear-gradient(90deg, rgba(110,231,255,0.25), rgba(192,132,252,0.25));
+  border: 1px solid rgba(110,231,255,0.4);
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  z-index: 20;
+}
+#start-btn:hover { background: linear-gradient(90deg, rgba(110,231,255,0.4), rgba(192,132,252,0.4)); }
+#start-btn.hidden { display: none; }
