@@ -11,14 +11,12 @@
 
 ## 在线体验 · Live Demo
 
-> 🌐 部署后填写：`https://<your-handle>.github.io/gesture/` 或 Vercel/Netlify URL
+> 🌐 https://hand-tracking-kappa.vercel.app/
 
 🎬 **演示视频 / GIF**
 
 <!-- 在 docs/media/demo.gif 放好后取消下一行注释 -->
-<!-- ![demo](./docs/media/demo.gif) -->
-
-> 录制方法见 [`docs/deployment.md`](./docs/deployment.md#录-demo-gif)
+![demo](./docs/media/demo.gif)
 
 ---
 
